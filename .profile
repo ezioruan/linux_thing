@@ -20,6 +20,11 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-export PATH="$PATH:/usr/local/go/bin/"
 export GOPATH="/home/ezioruan/mygo:/home/ezioruan/huo_server_go"
 export PATH=$PATH:${GOPATH%:*}/bin
+
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/home/ezioruan/cocos2d-x-3.0rc1/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+export PATH=$PATH:~/code/swift-0.94.1/bin/
