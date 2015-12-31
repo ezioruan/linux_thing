@@ -78,11 +78,8 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/Use
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="/Users/ezioruan/mygo:/Users/ezioruan/code/ninja_server"
-export PATH=$PATH:${GOPATH%:*}/bin
+export PATH=$PATH:${GOPATH%:*}/bin:/Users/ezioruan/code/linux_thing/scripts
 export RUST_SRC_PATH=/usr/local/src/rustc-1.1.0/src
 export PATH=$PATH:/usr/local/mysql-5.6.19-osx10.7-x86_64/bin
-export LC_ALL=en_US.UTF-8
+export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
-alias fuck='$(thefuck $(fc -ln -1))'
-# You can use whatever you want as an alias, like for mondays:
-alias FUCK='fuck'
