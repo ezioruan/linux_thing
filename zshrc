@@ -83,3 +83,5 @@ export RUST_SRC_PATH=/usr/local/src/rustc-1.1.0/src
 export PATH=$PATH:/usr/local/mysql-5.6.19-osx10.7-x86_64/bin
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+alias vim='/usr/local/Cellar/vim/7.4.891/bin/vim'
+alias vi='/usr/local/Cellar/vim/7.4.891/bin/vim'
