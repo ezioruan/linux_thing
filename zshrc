@@ -1,22 +1,20 @@
-# iterm2 color configuration
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# If you come from bash you might have to change your $PATH.
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/Users/ezioruan/mygo/bin:/Users/ezioruan/scipts"
+
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/Users/ezioruan/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="clean"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -30,8 +28,8 @@ ZSH_THEME="clean"
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to disable command auto-correction.
-# DISABLE_CORRECTION="true"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,13 +50,13 @@ ZSH_THEME="clean"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx python brew golang tmux,autojump)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git osx python brew golang nodejs php autojump zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/Users/ezioruan/mygo/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -75,13 +73,28 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/Use
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-export PATH=$PATH:/usr/local/go/bin
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export GOPATH="/Users/ezioruan/mygo:/Users/ezioruan/code/ninja_server"
-export PATH=$PATH:${GOPATH%:*}/bin:/Users/ezioruan/code/linux_thing/scripts
-export RUST_SRC_PATH=/usr/local/src/rustc-1.1.0/src
-export PATH=$PATH:/usr/local/mysql-5.6.19-osx10.7-x86_64/bin
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
-alias vim='/usr/local/Cellar/vim/7.4.891/bin/vim'
-alias vi='/usr/local/Cellar/vim/7.4.891/bin/vim'
+export PATH="$(brew --prefix homebrew/php/php56)/bin:/Users/ezioruan/Library/Python/2.7/bin:/usr/local/mysql-5.7.16-osx10.11-x86_64/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
+export PATH="/Users/ezioruan/code/linux_thing/scripts:$PATH"
+alias python='/usr/local/Cellar/python/2.7.12_2/bin/python'
+
+#alias for cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
+export NVM_DIR="/Users/ezioruan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
